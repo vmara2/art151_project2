@@ -35,7 +35,7 @@ def rs():
 
     body = soup.p.text
 
-    return render_template("herb_patch.html", head_text = title, body_text = body)
+    return render_template("runescape.html", head_text = title, body_text = body)
 
 @app.route('/herb_run')
 
@@ -52,7 +52,7 @@ def run():
 
     body = soup.p.text
 
-    return render_template("herb_patch.html", head_text = title, body_text = body)
+    return render_template("herb_run.html", head_text = title, body_text = body)
 
 @app.route('/herb_patch')
 
