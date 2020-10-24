@@ -34,8 +34,9 @@ def rs():
     soup = BeautifulSoup(request2.content, "html.parser")
 
     body = soup.p.text
+    image = f"https://oldschool.runescape.wiki{soup.img.get('src')}"
 
-    return render_template("runescape.html", head_text = title, body_text = body)
+    return render_template("runescape.html", head_text = title, body_text = body, image = image)
 
 @app.route('/herb_run')
 
@@ -51,8 +52,9 @@ def run():
     soup = BeautifulSoup(request2.content, "html.parser")
 
     body = soup.p.text
+    image = f"https://oldschool.runescape.wiki{soup.img.get('src')}"
 
-    return render_template("herb_run.html", head_text = title, body_text = body)
+    return render_template("herb_run.html", head_text = title, body_text = body, image = image)
 
 @app.route('/herb_patch')
 
@@ -68,5 +70,6 @@ def patch():
     soup = BeautifulSoup(request2.content, "html.parser")
 
     body = soup.p.text
+    image = f"https://oldschool.runescape.wiki{soup.img.get('src')}"
 
-    return render_template("herb_patch.html", head_text = title, body_text = body)
+    return render_template("herb_patch.html", head_text = title, body_text = body, image = image)
