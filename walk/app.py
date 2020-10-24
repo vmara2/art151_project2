@@ -25,7 +25,7 @@ def index():
 def rs():
     request = requests.get(f"https://oldschool.runescape.wiki/?search={runescape}&title=Special:Search&limit=250&fulltext=1")
     soup = BeautifulSoup(request.content, "html.parser")
-    titles = soup.find_all('div')
+    titles = soup.find_all('a')
 
     title = titles[seed].text
 
@@ -42,7 +42,7 @@ def rs():
 def run():
     request = requests.get(f"https://oldschool.runescape.wiki/?search={herb_run}&title=Special:Search&limit=250&fulltext=1")
     soup = BeautifulSoup(request.content, "html.parser")
-    titles = soup.find_all('div')
+    titles = soup.find_all('a')
 
     title = titles[seed].text
 
@@ -59,7 +59,7 @@ def run():
 def patch():
     request = requests.get(f"https://oldschool.runescape.wiki/?search={herb_patch}&title=Special:Search&limit=250&fulltext=1")
     soup = BeautifulSoup(request.content, "html.parser")
-    titles = soup.find_all('div')
+    titles = soup.find_all('a')
 
     title = titles[seed].text
 
