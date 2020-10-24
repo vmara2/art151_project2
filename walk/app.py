@@ -32,4 +32,4 @@ def patch():
     title = titles[seed].text
     body = divs[seed].text
 
-    return render_template("herb_patch.html", head_text = title, body_text = body)
+    return render_template("herb_patch.html", title = head_text, body = body_text)
