@@ -22,7 +22,7 @@ def index():
 
 @app.route('/herb_patch')
 
-def herb_patch():
+def patch(): 
     request = requests.get(f"https://oldschool.runescape.wiki/?search={herb_patch}&title=Special:Search&limit=250&fulltext=1")
     soup = BeautifulSoup(request.content, "html.parser")
 
