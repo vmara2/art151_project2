@@ -9,6 +9,7 @@ import re
 runescape = "runescape"
 herb_run = "herb+run"
 herb_patch = "herb+patch"
+herb_seed = "herb+seed"
 
 # Our seed is what the current price of irit seeds are in OSRS
 seed_request = requests.get("https://secure.runescape.com/m=itemdb_oldschool/Irit+seed/viewitem?obj=5297")
