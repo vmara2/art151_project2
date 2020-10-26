@@ -76,7 +76,7 @@ def patch():
 
 @app.route('/herb_seed')
 
-def patch():
+def hseed():
     request = requests.get(f"https://oldschool.runescape.wiki/?search={herb_seed}&title=Special:Search&limit=250&fulltext=1")
     soup = BeautifulSoup(request.content, "html.parser")
     titles = soup.find_all('a')
